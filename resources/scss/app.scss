@@ -10,6 +10,10 @@
     outline: none;
 }
 
+.bg_night {
+    background-color: rgb(14, 14, 14);
+}
+
 
 // CONTAINER 
 
@@ -26,4 +30,7 @@
 
 .my_card {
     min-height: 650px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgb(255, 255, 255) 20%, rgba(6, 32, 55, 0) 100%);
+    border: none;
 }
