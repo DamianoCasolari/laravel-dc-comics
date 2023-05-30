@@ -1,5 +1,18 @@
 @import '~bootstrap/scss/bootstrap';
 
+// UTILITY SELECTOR
+
+.no-underline a {
+    text-decoration: none !important;
+}
+
+.no_outline {
+    outline: none;
+}
+
+
+// CONTAINER 
+
 .container_img {
     width: 100%;
 }

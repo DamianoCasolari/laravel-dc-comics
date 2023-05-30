@@ -13,15 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comics', function (Blueprint $table) {
-            $table->id();
-            $table->string('title', 50);
-            $table->text('description'); 
-            $table->text('thumb'); 
-            $table->string('price', 10); 
-            $table->date('sale_date'); 
-            $table->string('type', 100); 
-            $table->timestamps();
+        Schema::table('comics', function (Blueprint $table) {
+            $table->string('series')->nullable();
         });
     }
 
@@ -32,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comics');
+        Schema::table('comics', function (Blueprint $table) {
+            
+        });
     }
 };

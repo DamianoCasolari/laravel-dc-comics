@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ComicController;
 use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'home']
-);
+// GUEST  CONTROLLER
+
+Route::get('/', [PageController::class, 'home'])->name('home');
+
+
+
+// ADMIN  CONTROLLER
+
+Route::get('/admin', [ComicController::class, 'index'])->name('admin');
+
