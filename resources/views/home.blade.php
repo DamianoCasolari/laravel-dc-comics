@@ -6,7 +6,8 @@
                 <div class="p-3">
                     <div class="card my_card p-4 col shadow">
                         <div class="container_img d-flex justify-content-center">
-                            <img src="{{ $comic->thumb }}" class="comic_img w-100" alt="{{ $comic->title . 'image' }}">
+                            <img src="{{ $comic->thumb }}" class="comic_img w-100 shadow rounded-2"
+                                alt="{{ $comic->title . 'image' }}">
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between">
                             <p class="card-text">{{ $comic->type }}</p>

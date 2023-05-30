@@ -23,5 +23,6 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 
 // ADMIN  CONTROLLER
 
-Route::get('/admin', [ComicController::class, 'index'])->name('admin');
+// Route::get('/admin', [ComicController::class, 'index'])->name('admin');
+Route::resource('comics', ComicController::class);
 
