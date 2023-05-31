@@ -1,6 +1,10 @@
 @extends('layout.app')
 @section('title', $comic->name)
 @section('content')
+    <div class="add_comic_container container d-flex justify-content-end mb-5">
+        <a href="{{ route('admin.comics.index') }}" type="button" class="btn btn-dark my_button ">
+            Back to index</a>
+    </div>
     <div class="container d-flex flex-column justify-content-around">
         <div class="img_cotainer m-4 text-center">
             <img class="img-fluid " src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
