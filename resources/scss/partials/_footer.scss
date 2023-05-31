@@ -1,0 +1,112 @@
+@use "./variables" as *;
+@use "./utility_selector" as *;
+
+
+// TOP FOOTER SELECTRO 
+
+#app_footer {
+    background-color: $clr_footer;
+    color: $clr_total_light;
+
+    .container_footer {
+
+        transition-duration: 1s;
+
+        .top_footer.my_background {
+            background-image: url(../img/footer-bg.jpg);
+            background-size: cover;
+            background-position: center;
+
+            .info_top_footer {
+                height: 100%;
+
+                ul li {
+                    list-style: none;
+
+                    a {
+                        font-family: 'Schibsted Grotesk', sans-serif;
+                        color: $clr_pale_light;
+                        font-weight: 300;
+                        line-height: 22px;
+                        transition-duration: 0.3s;
+                    }
+
+                    & a:hover {
+                        color: $clr_total_light;
+                    }
+                }
+
+
+                .img_container {
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-position: right;
+                    background-image: url(../img/dc-logo-bg.png);
+
+
+                }
+            }
+        }
+
+        // BOTTOM FOOTER SELECTOR 
+
+        .bottom_footer {
+
+            .link_container {
+                border: 2px solid $clr_extra_options;
+                padding: 15px 20px;
+                text-align: center;
+                margin: 10px 0;
+                transition-duration: 0.4s;
+                cursor: pointer;
+
+                &:hover {
+                    // border: 2px solid $clr_total_light;
+                    background-image: url(../img/jumbotron.jpg);
+                    background-size: cover;
+                    background-position: bottom;
+                }
+
+                &:hover a {
+                    text-shadow: 0px 0px 6px $clr_primary;
+                }
+
+                a {
+                    color: $clr_total_light;
+                    transition-duration: 0.3s;
+
+                }
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+
+                & div:first-child {
+                    color: $clr_extra_options;
+                }
+
+                & a:hover {
+                    filter: brightness(180%);
+                }
+
+
+            }
+        }
+    }
+}
+
+// Media Query 
+
+@media screen and (min-width: 576px) {
+    .bottom_footer {
+        height: 115px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .top_footer.my_background {
+        min-height: 390px !important;
+    }
+}

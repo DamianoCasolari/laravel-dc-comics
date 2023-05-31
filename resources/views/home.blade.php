@@ -12,10 +12,10 @@
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between">
                             <p class="card-text">{{ $comic->type }}</p>
-                            <h6 class="card-subtitle mb-2 text-muted"><b> Series :</b> <br>
+                            <h6 class="mb-2 gray_text"><b> Series :</b> <br>
                                 <span class="ms-3 ">{{ $comic->series }}</span>
                             </h6>
-                            <h6 class="card-subtitle mb-2 text-muted "><b> Sale date :</b> <br>
+                            <h6 class="mb-2 gray_text "><b> Sale date :</b> <br>
                                 <span class="ms-3">{{ $comic->sale_date }}</span>
                             </h6>
 

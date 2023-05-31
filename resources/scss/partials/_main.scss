@@ -1,0 +1,36 @@
+@use "./variables" as *;
+
+
+.my_jumbotron {
+    height: 390px;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-position: 50% 0%;
+        object-fit: cover;
+    }
+
+}
+
+.main_content {
+    position: relative;
+
+    .tag {
+
+        background-color: $clr_extra_options;
+        color: $clr_total_light;
+        font-size: 20px;
+        padding: 15px 25px;
+        position: absolute;
+        bottom: -25.4px;
+        left: 25px;
+        z-index: 1;
+
+    }
+}
+
+main {
+    background-color: $clr_primary;
+
+}

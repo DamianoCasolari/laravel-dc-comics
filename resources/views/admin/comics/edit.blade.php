@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('title', 'Add new comic')
 @section('content')
-    <div class="add_comic_container container d-flex justify-content-end mb-5">
+    <div class="add_comic_container container d-flex justify-content-end py-4">
         <a href="{{ route('admin.comics.index') }}" type="button" class="btn btn-dark my_button ">
             <i class="fa-solid fa-house"></i> Back to index</a>
     </div>

@@ -1,0 +1,61 @@
+@use "./variables" as *;
+@use "./animation" as *;
+
+
+.container_header {
+
+
+
+    a {
+        display: inline-block;
+        position: relative;
+        color: $clr_total_dark;
+        transition-duration: 0.4s;
+    }
+
+    .nav_item:hover a {
+        text-decoration: underline !important;
+
+    }
+
+    .search_block {
+        border-bottom: 2px solid $clr_total_dark;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            border: none;
+            outline: none;
+        }
+    }
+
+
+    div.active {
+        border-bottom: 4px solid $clr_extra_options;
+    }
+
+    .active a {
+        color: $clr_extra_options;
+    }
+
+}
+
+// MEDIA QUERY 
+
+// @media screen and (min-width:366px) {
+//     .container_header {
+//         height: 115px;
+
+//     }
+// }
+
+@media screen and (min-width:992px) {
+    .container_header {
+        .logoDc {
+            filter: grayscale(0) !important;
+        }
+
+    }
+}

@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('title', $comic->name)
 @section('content')
-    <div class="add_comic_container container d-flex justify-content-end mb-5 light_shadow">
+    <div class="add_comic_container container d-flex justify-content-end py-4 light_shadow">
         <a href="{{ route('admin.comics.index') }}" type="button" class="btn btn-dark my_button ">
             <i class="fa-solid fa-house"></i> Back to index</a>
     </div>
@@ -10,7 +10,7 @@
             <img class="img-fluid drop_shadow" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
 
         </div>
-        <div class="info_container text-white">
+        <div class="info_container text-white py-5">
             <p class="card-text">{{ $comic->type }}</p>
             <h1>{{ $comic->title }}</h1>
             <p>
@@ -25,7 +25,7 @@
             </h6>
 
             <hr>
-            <h5 class="card-title text-end">{{ $comic->price }}</h5>
+            <h5 class="card-title text-end ">{{ $comic->price }}</h5>
         </div>
     </div>
 @endsection
