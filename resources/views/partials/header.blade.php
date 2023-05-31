@@ -1,4 +1,4 @@
-<header>
+<header class="d-flex align-items-center">
     <div class="container_header container-lg d-flex justify-content-between align-items-center py-4 px-3">
         <div class="logo_nav d-flex align-items-center">
             <div class="img_container logoDc">
@@ -21,5 +21,7 @@
                     class="fa-solid fa-magnifying-glass ms-2"></i></button>
         </div>
     </div>
-
 </header>
+<div class="container">
+    <hr class="text-white">
+</div>

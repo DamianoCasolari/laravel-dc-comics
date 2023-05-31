@@ -3,18 +3,22 @@
 @section('content')
     <div class="container">
         @if (session('message'))
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <strong>{{ session('message') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
 
         <div class="add_comic_container d-flex justify-content-end mb-5">
-            <a href="{{ route('admin.comics.create') }}" type="button" class="btn btn-dark my_button ">Add comic</a>
+            <a href="{{ route('admin.comics.create') }}" type="button" class="btn btn-dark my_button "> <i class="fa fa-plus"
+                    aria-hidden="true"></i> Add comic</a>
         </div>
+        <h1 class="text-primary mb-4 font_title">Admin page</h1>
         <table class="table align-middle text-center  table-borderless">
             <thead>
                 <tr class="text-light my_button">
                     <th>Thumb</th>
+                    <th>Title</th>
                     <th>Type</th>
                     <th>Series</th>
                     <th>Sale Date</th>
@@ -29,16 +33,49 @@
                             <img style="width:70px;height:100px;" src="{{ $comic->thumb }}" class="comic_img"
                                 alt="{{ $comic->title . ' image' }}">
                         </td>
+                        <td class="">{{ $comic->title }}</td>
                         <td class="">{{ $comic->type }}</td>
                         <td class="">{{ $comic->series }}</td>
                         <td class="">{{ $comic->sale_date }}</td>
                         <td class="">{{ $comic->price }}</td>
-                        <td class="">
-                            <a name="" id="" class="btn btn-primary"
+                        <td class="buttons_container d-flex flex-column d-xxl-table-cell">
+                            <a name="" id="" class="btn btn-primary m-1 fs_13"
                                 href="{{ route('admin.comics.show', $comic->id) }}" role="button">View</a>
-                            Edit | Delete
+                            <a name="" id="" class="btn btn-primary m-1 fs_13"
+                                href="{{ route('admin.comics.edit', $comic->id) }}" role="button">Edit</a>
+                            <button type="button" class="btn btn-danger m-1 fs_13" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Delete
+                            </button>
+
                         </td>
                     </tr>
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure you want to delete the item?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <form action="{{ route('admin.comics.destroy', $comic->id) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger m-1">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 @endforeach
             </tbody>
         </table>

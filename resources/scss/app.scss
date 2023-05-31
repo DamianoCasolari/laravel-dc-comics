@@ -1,6 +1,36 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Fasthand&family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+// font-family: 'Comforter', cursive;
+// font-family: 'Fasthand', cursive;
+// font-family: 'Poppins', sans-serif;
+
+
+
+//GENERAL SELECTOR 
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
 
 // UTILITY SELECTOR
+
+.fs_13 {
+    font-size: 13px;
+}
+
+.font_title {
+    font-family: 'Poppins', sans-serif;
+}
+
+.drop_shadow {
+    filter: drop-shadow(3px 4px 6px black);
+}
+
+.light_shadow {
+    filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.762));
+}
 
 .no-underline a {
     text-decoration: none !important;
@@ -18,7 +48,17 @@
     background-color: rgb(61, 61, 61);
 }
 
+
 // CONTAINER 
+
+.search_block {
+    border-bottom: 2px solid white;
+
+    input {
+        max-width: 150px;
+    }
+}
+
 
 .container_img {
     width: 100%;
@@ -38,6 +78,9 @@
     border: none;
 }
 
+// .buttons_container {
+
+// }
 
 
 //TABLE
