@@ -16,7 +16,7 @@ class ComicController extends Controller
     public function index()
     {
         // dd(Comic::all());
-        $comics = Comic::all();
+        $comics = Comic::orderByDesc('id')->get();
         return view('admin.comics.index', compact('comics'));
     }
 
@@ -27,7 +27,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.comics.create');
     }
 
     /**
@@ -38,7 +38,19 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        // dd($request->title);
+        $comic = new Comic();
+        $comic->title = $request->title;
+        $comic->thumb = $request->thumb;
+        $comic->description = $request->description;
+        $comic->price = $request->price;
+        $comic->sale_date = $request->sale_date;
+        $comic->type = $request->type;
+        $comic->series = $request->series;
+        $comic->save();
+
+        return to_route('admin.comics.index');
     }
 
     /**

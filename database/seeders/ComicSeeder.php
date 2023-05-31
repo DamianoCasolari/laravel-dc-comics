@@ -28,7 +28,5 @@ class ComicSeeder extends Seeder
             $NewComic->series = $comic['series'];
             $NewComic->save();
         }
-
-    
     }
 }
