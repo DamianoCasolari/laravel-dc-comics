@@ -2,9 +2,12 @@
 
 @section('content')
     <div class="container">
+        <div class="add_comic_container d-flex justify-content-end mb-5">
+            <a href="{{ route('admin.comics.create') }}" type="button" class="btn btn-dark my_button ">Add comic</a>
+        </div>
         <table class="table align-middle text-center  table-borderless">
             <thead>
-                <tr class="text-light">
+                <tr class="text-light my_button">
                     <th>Thumb</th>
                     <th>Type</th>
                     <th>Series</th>
