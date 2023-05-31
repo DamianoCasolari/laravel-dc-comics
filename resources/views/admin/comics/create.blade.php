@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@section('title', 'Add new comic')
 @section('content')
     <div class="container d-flex justify-content-center align-item-center">
         <div class="form_container w-100">

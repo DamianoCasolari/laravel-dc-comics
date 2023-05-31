@@ -50,7 +50,7 @@ class ComicController extends Controller
         $comic->series = $request->series;
         $comic->save();
 
-        return to_route('admin.comics.index');
+        return to_route('admin.comics.index')->with('message', 'New item successfully added');;
     }
 
     /**
@@ -61,7 +61,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //
+        return view('admin.comics.show', compact('comic'));
     }
 
     /**

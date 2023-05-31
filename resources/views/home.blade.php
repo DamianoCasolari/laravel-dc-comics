@@ -1,4 +1,5 @@
 @extends('layout.app')
+@section('title', 'Home Page')
 @section('content')
     <div class="container">
         <div class="bg_night p-4 row row-cols-2 row-cols-lg-3">
