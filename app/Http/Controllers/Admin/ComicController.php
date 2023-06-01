@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
+
 class ComicController extends Controller
 {
     /**
@@ -38,6 +39,25 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+
+        $val_data = $request->validate([
+            'title' => 'required|max:255',
+            'thumb' => 'nullable',
+            'price' => 'nullable|max:20',
+            'description' => 'nullable',
+            'type' => 'nullable|max:100',
+            'series' => 'nullable|max:255',
+            'date' => 'nullable'
+
+        ]);
+
+        // $val_data = $request->validate([
+        //     'name' => 'required|min:5|max:50',
+        //     'image' => 'nullable|max:255',
+        //     'price' => 'nullable',
+        //     'description' => 'nullable'
+        // ]);
+
         // dd($request->all());
         // dd($request->title);
         $comic = new Comic();
@@ -50,7 +70,7 @@ class ComicController extends Controller
         $comic->series = $request->series;
         $comic->save();
 
-        return to_route('admin.comics.index')->with('message', 'New item successfully added');;
+        return to_route('admin.comics.index')->with('message', "$comic->title added successfully");;
     }
 
     /**
@@ -84,17 +104,32 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $data = [
-            'title' => $request->title,
-            'thumb' => $request->thumb,
-            'description' => $request->description,
-            'price' => $request->price,
-            'sale_date' => $request->sale_date,
-            'type' => $request->type,
-            'series' => $request->series
-        ];
-        $comic->update($data);
-        return to_route('admin.comics.index')->with('message', 'Comic updated successfully ');
+
+        $val_data = $request->validate([
+            'title' => 'required|max:255',
+            'thumb' => 'nullable',
+            'price' => 'nullable|max:20',
+            'description' => 'nullable',
+            'type' => 'nullable|max:100',
+            'series' => 'nullable|max:255',
+            'date' => 'nullable'
+
+        ]);
+
+        // $data = [
+        //     'title' => $request->title,
+        //     'thumb' => $request->thumb,
+        //     'description' => $request->description,
+        //     'price' => $request->price,
+        //     'sale_date' => $request->sale_date,
+        //     'type' => $request->type,
+        //     'series' => $request->series
+        // ];
+
+        $comic->update($val_data);
+        // $comic->update($data);
+
+        return to_route('admin.comics.index')->with('message', "$comic->title updated successfully");
     }
 
     /**
@@ -106,6 +141,6 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return to_route('admin.comics.index')->with('message', 'Comic deleted successfully');
+        return to_route('admin.comics.index')->with('message', "$comic->title delete successfully");
     }
 }

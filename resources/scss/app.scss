@@ -3,107 +3,10 @@
 @use "./partials/main.scss" as *;
 @use "./partials/shop_options.scss" as *;
 @use "./partials/footer.scss" as *;
+@use "./partials/admin_index.scss" as *;
 // // @use "node_modules/bootstrap/scss/offcanvas.scss" as *;
 // @use "node_modules/bootstrap/scss/bootstrap-grid.scss" as *;
 // @use "node_modules/bootstrap/scss/bootstrap-utilities.scss" as *;
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Roboto:wght@300;400;500;700&family=Schibsted+Grotesk:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comforter&family=Fasthand&family=Poppins:wght@300;400;500;600;700;900&display=swap');
-
-
-
-//GENERAL SELECTOR 
-
-body {
-    font-family: 'Poppins', sans-serif;
-
-}
-
-// UTILITY SELECTOR
-
-.fs_13 {
-    font-size: 13px;
-}
-
-.font_title {
-    font-family: 'Poppins', sans-serif;
-}
-
-.drop_shadow {
-    filter: drop-shadow(3px 4px 6px black);
-}
-
-.light_shadow {
-    filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.762));
-}
-
-
-.no-underline a {
-    text-decoration: none !important;
-}
-
-.no_outline {
-    outline: none;
-}
-
-.my_button {
-    background-color: rgb(61, 61, 61);
-}
-
-
-// CONTAINER 
-
-.search_block {
-    border-bottom: 2px solid white;
-
-    input {
-        max-width: 150px;
-    }
-}
-
-
-.container_img {
-    width: 100%;
-}
-
-.comic_img {
-    object-fit: cover;
-    object-position: center;
-    height: 295px;
-    width: 178px;
-}
-
-.my_card {
-    min-height: 650px;
-    background: linear-gradient(0deg, rgb(255, 255, 255) 20%, rgba(6, 32, 55, 0) 100%);
-    border: none;
-    cursor: pointer;
-    transition-duration: 0.3s;
-}
-
-
-//TABLE
-
-tr:nth-of-type(even) {
-    background-color: rgb(39, 39, 39);
-}
-
-
-//effect
-
-.less_brightness {
-    filter: brightness(90%);
-    transition-duration: 0.3s;
-}
-
-.hover_efx:hover {
-
-    filter: brightness(100%);
-    background-color: rgb(63, 63, 63);
-}
-
-.my_card:hover {
-    background: linear-gradient(180deg, rgb(255, 255, 255) 10%, rgba(5, 25, 43, 0) 100%);
-    color: white !important;
-    transform: scale(95%);
-}

@@ -1,0 +1,19 @@
+//TABLE
+
+tr:nth-of-type(even) {
+    background-color: rgb(39, 39, 39);
+}
+
+
+//effect
+
+.less_brightness {
+    filter: brightness(90%);
+    transition-duration: 0.3s;
+}
+
+.hover_efx:hover {
+
+    filter: brightness(100%);
+    background-color: rgb(63, 63, 63);
+}

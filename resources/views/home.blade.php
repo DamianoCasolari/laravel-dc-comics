@@ -5,7 +5,7 @@
         <div class="bg_night p-4 row row-cols-2 row-cols-lg-3">
             @foreach ($comics as $comic)
                 <div class="p-3">
-                    <div class="card my_card p-4 col shadow">
+                    <div class="card my_card p-4 col drop_shadow">
                         <div class="container_img d-flex justify-content-center">
                             <img src="{{ $comic->thumb }}" class="comic_img w-100 shadow rounded-2"
                                 alt="{{ $comic->title . 'image' }}">

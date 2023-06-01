@@ -38,6 +38,10 @@
                         <td class="">{{ $comic->series }}</td>
                         <td class="">{{ $comic->sale_date }}</td>
                         <td class="">{{ $comic->price }}</td>
+
+                        {{-- ACTIONS  --}}
+
+
                         <td class="buttons_container d-flex flex-column d-xxl-table-cell">
                             <a name="" id="" class="btn btn-primary m-1 fs_13"
                                 href="{{ route('admin.comics.show', $comic->id) }}" role="button"> <i class="fa fa-eye"
@@ -51,19 +55,14 @@
                                 <i class="fa-regular fa-trash-can"></i>
                             </button>
 
-
-
-
-
-                            <!-- Optional: Place to the bottom of scripts -->
-                            {{-- <script>
-                                const myModal = new bootstrap.Modal(document.getElementById('{{ $comic->id }}'), options)
-                            </script> --}}
-
                         </td>
                     </tr>
             </tbody>
-            <!-- Modal -->
+
+
+            <!-- MODAL -->
+
+
             <div class="modal fade" id="comic-delete-{{ $comic->id }}" tabindex="-1"
                 aria-labelledby="modalTitle-{{ $comic->id }}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
