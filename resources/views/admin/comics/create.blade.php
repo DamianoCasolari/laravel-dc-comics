@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.admin_app')
 @section('title', 'Add new comic')
 @section('content')
     <div class="add_comic_container container d-flex justify-content-end py-4">

@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.admin_app')
 @section('title', 'Add new comic')
 @section('content')
     <div class="add_comic_container container d-flex justify-content-end py-4">
@@ -54,7 +54,7 @@
                     </div>
                 </div>
 
-                <div class="mb-3
+                <div class="mb-5
                                     text-center col-12">
                     <div class=" col-12 mt-5">
                         <button type="submit" class="btn btn-primary w-100">Submit</button>

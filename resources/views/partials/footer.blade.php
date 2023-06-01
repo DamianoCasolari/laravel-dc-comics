@@ -32,15 +32,29 @@
                             <div class="link_list_footer mx-3">
                                 <h2 class="my-3 my-xl-4">DC</h2>
                                 <ul class="p-0">
-                                    {{-- <li v-for="link in arrayDc"><a href="#">{{ link }}</a>< </li> --}}
+                                    <li><a href="#"> Terms of Use </a> </li>
+                                    <li><a href="#"> Privacy policy </a> </li>
+                                    <li><a href="#"> Add Choices </a> </li>
+                                    <li><a href="#"> advertising</a> </li>
+                                    <li><a href="#"> Jobs </a> </li>
+                                    <li><a href="#"> Subscriptions </a> </li>
+                                    <li><a href="#"> Talent Workshop </a> </li>
+                                    <li><a href="#"> CPSC certificates </a> </li>
+                                    <li><a href="#"> Ratings </a> </li>
+                                    <li><a href="#"> Shop Help </a> </li>
+                                    <li><a href="#"> Contacts Us </a> </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-4 col-md-2">
                             <div class="link_list_footer mx-3">
-                                <h2 class="my-3 my-xl-4">sites</h2>
+                                <h2 class="my-3 my-xl-4">Sites</h2>
                                 <ul class="p-0">
-                                    {{-- <li v-for="link in arraySites"><a href="#">{{ link }}</a>< </li> --}}
+                                    <li><a href="#"> DC </a> </li>
+                                    <li><a href="#"> Mad Magazine </a> </li>
+                                    <li><a href="#"> DC Kids </a> </li>
+                                    <li><a href="#"> DC Universe </a> </li>
+                                    <li><a href="#"> DC POWER Visa </a> </li>
                                 </ul>
                             </div>
                         </div>

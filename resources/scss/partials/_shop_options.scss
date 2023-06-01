@@ -1,0 +1,68 @@
+@use "./variables" as *;
+@use "./utility_selector" as *;
+
+.extra_options {
+    background-color: $clr_extra_options;
+    transition-duration: 1s;
+
+    .options_container {
+        padding: 15px 0;
+        height: 100%;
+
+        .additional_option {
+            width: calc(100% / 3);
+            color: $clr_total_light;
+
+
+
+            .img_container {
+                width: 60px;
+
+                img {
+                    object-fit: contain;
+                    height: 50px;
+
+                }
+            }
+
+            &:hover img {
+                animation: tilt 0.3s linear alternate infinite;
+            }
+
+            .name_option {
+                transition-duration: 0.5s;
+            }
+
+            &:hover {
+                // color: $clr_primary;
+                filter: invert(1);
+            }
+        }
+    }
+}
+
+// MEDIA QUERY 
+
+@media screen and (min-width: 576px) {
+    .extra_options {
+        height: 150px;
+
+        .additional_option {
+            width: calc(100% / 5) !important;
+
+        }
+    }
+}
+
+// ANIMATION 
+
+@keyframes tilt {
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+
+}

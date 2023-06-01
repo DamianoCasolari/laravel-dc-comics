@@ -21,15 +21,14 @@
 <body class="bg_night">
     <!--  includiamo l'header del sito web con il menu tramite un partial -->
     @include('partials.header')
-    @include('partials.jumbotron')
 
     <main>
         @yield('content')
 
     </main>
-    @include('partials.shop_options')
+
     <!-- includiamo il footer del sito web tramite un partial -->
-    @include('partials.footer')
+    @include('partials.admin_footer')
 
 </body>
 
