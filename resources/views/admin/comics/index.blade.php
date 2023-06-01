@@ -47,37 +47,13 @@
                                     class="fa fa-pencil-square" aria-hidden="true"></i> </a>
 
                             <button type="button" class="btn btn-danger m-1 fs_13" data-bs-toggle="modal"
-                                data-bs-target="#{{ $comic->id }}">
+                                data-bs-target="#comic-delete-{{ $comic->id }}">
                                 <i class="fa-regular fa-trash-can"></i>
                             </button>
 
 
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="{{ $comic->id }}" tabindex="-1"
-                                aria-labelledby="modalTitle-{{ $comic->id }}" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ 'Warning' }}</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Are you sure you want to delete the item?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Cancel</button>
-                                            <form action="{{ route('admin.comics.destroy', $comic->id) }}" method="post">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger m-1">Delete</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
 
                             <!-- Optional: Place to the bottom of scripts -->
                             {{-- <script>
@@ -87,6 +63,31 @@
                         </td>
                     </tr>
             </tbody>
+            <!-- Modal -->
+            <div class="modal fade" id="comic-delete-{{ $comic->id }}" tabindex="-1"
+                aria-labelledby="modalTitle-{{ $comic->id }}" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="modalTitle-{{ $comic->id }}">
+                                {{ 'Warning' }}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete the item?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <form action="{{ route('admin.comics.destroy', $comic->id) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger m-1">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
             @endforeach
 
         </table>
