@@ -10,7 +10,7 @@
                 <div class="nav_option fw-bold d-flex no-underline text-start">
                     <div class=" mx-3">
                         <a class="me-2 fs-5" href="{{ route('home') }}"> Home</a>
-                        <a class="fs-5" href="{{ route('admin.comics.index') }}"> admin</a>
+                        <a class="fs-5 text-black-50" href="{{ route('admin.comics.index') }}"> admin</a>
                     </div>
                 </div>
             </nav>

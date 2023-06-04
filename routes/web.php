@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 // GUEST  CONTROLLER
 
 Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/comic/{id}', [PageController::class, "show"])->name("showComic");
 
 
 
 // ADMIN  CONTROLLER
 
 // Route::resource('comics', ComicController::class);
-Route::resource('/admin/comics',ComicController::class,['as'=>'admin']);
-
+Route::resource('/admin/comics', ComicController::class, ['as' => 'admin']);

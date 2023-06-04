@@ -25,22 +25,52 @@
 .main_content {
     position: relative;
 
-    .tag {
-
-        background-color: $clr_extra_options;
-        color: $clr_total_light;
-        font-size: 20px;
-        padding: 15px 25px;
-        position: absolute;
-        bottom: -25.4px;
-        left: 25px;
-        z-index: 1;
-
-    }
 }
 
+.tag {
+
+    background-color: $clr_extra_options;
+    color: $clr_total_light;
+    font-size: 20px;
+    padding: 15px 25px;
+    position: absolute;
+    top: -56.4px;
+    left: 15px;
+    z-index: 1;
+
+}
+
+.dark_tag {
+
+    background-color: $clr_primary;
+    color: $clr_total_light;
+    border: 1px solid $clr_total_light;
+    font-size: 20px;
+    padding: 15px 25px;
+    position: absolute;
+    top: -31.4px;
+    left: 15px;
+    z-index: 1;
+
+}
+
+
+.container_card {
+    min-height: 480px;
+    display: block;
+}
+
+.my_card {
+    min-height: 480px !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+
 .my_card:hover {
-    background: linear-gradient(180deg, rgb(255, 255, 255) 10%, rgba(5, 25, 43, 0) 100%);
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(5, 25, 43, 0) 95%) !important;
     color: white !important;
     text-shadow: 1px 1px 2px black;
     border: none;

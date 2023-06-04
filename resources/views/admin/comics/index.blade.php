@@ -16,7 +16,7 @@
         <h1 class="text-primary mb-4 font_title">Admin page</h1>
         <table class="table align-middle text-center  table-borderless">
             <thead>
-                <tr class="text-light my_button">
+                <tr class="text-light my_button align-middle">
                     <th>Thumb</th>
                     <th>Title</th>
                     <th>Type</th>
