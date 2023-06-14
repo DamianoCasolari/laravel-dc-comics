@@ -6,7 +6,7 @@
         <div class="bg_night p-2 row row-cols-2 row-cols-lg-4 mt-4">
             @foreach ($comics as $comic)
                 <a class="h-100" href="{{ route('showComic', $comic->id) }}" role="button">
-                    <div class="p-2">
+                    <div class="pt-2">
                         <div class=" my_card p-2 col drop_shadow d-flex justify-content-between flex-column h-100">
                             <div class="container_img d-flex justify-content-center flex-column">
                                 <img src="{{ $comic->thumb }}" class="comic_img w-100 shadow rounded-2"

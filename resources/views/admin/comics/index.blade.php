@@ -76,6 +76,7 @@
                         <div class="modal-body">
                             Are you sure you want to delete the item?
                         </div>
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                             <form action="{{ route('admin.comics.destroy', $comic->id) }}" method="post">
@@ -84,6 +85,7 @@
                                 <button type="submit" class="btn btn-danger m-1">Delete</button>
                             </form>
                         </div>
+
                     </div>
                 </div>
             </div>
